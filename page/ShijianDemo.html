@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="doSomething()">
+<!--dindow.onload事件可以用于在整个页面加载之后运行代码-->
+<script>
+    window.onload = function () {
+        alert("整个页面已经加载完成");
+    }
+
+</script>
+<!--// onchange事件主要用于文本框，
+当文本框内的文本发生变化并且焦点从元素中丢失时，
+调用事件处理程序,在用户名发生改变时，将其值转成大写-->
+<!--<input type="text" id="name" onchange="change()">-->
+<!--<script>-->
+    <!--function change() {-->
+        <!--var x = document.getElementById("name");-->
+        <!--x.value = x.value.toUpperCase();-->
+
+    <!--}-->
+<!--</script>-->
+
+<!-- 9.3删除事件监听-->
+<!--addEventListener()方法将事件处理程序附加到元素，
+而不会覆盖现有的事件处理程序
+单击按钮后 将显示带有随机数的警报，并删除事件监听器-->
+<button id="demo">开始</button>
+<script>
+    var btn = document.getElementById("demo");
+    btn.addEventListener("click",myFunction);
+    function myFunction() {
+        alert(Math.random());
+        btn.removeEventListener("click",myFunction);
+
+    }
+
+</script>
+
+
+
+</body>
+</html>

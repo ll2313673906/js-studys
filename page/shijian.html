@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javaScript事件</title>
+
+</head>
+<body>
+    <p id="tip1">这边显示提示</p>
+    <h2 id="tip">这边显示提示</h2>
+    <hr>
+<p onclick="clickfn()">点击我看看</p>
+    <br>
+    <input type="text" onfocus="focusfn()" onblur="blurfn()" value="获得焦点">
+    <br><br>
+<div onmouseover="movefn()" onmouseout="moutfn()">鼠标移动进来看看</div>
+   <button onclick="show()">点击我</button>
+    <script>
+        // 显示一个提醒弹出框口
+        function show() {
+            alert("你好，我在这里！");
+
+        }
+        // 给元素绑定事件监听
+        var x = document.getElementById("demo");
+        x.onclick = function () {
+            document.getElementById("date").innerHTML = new Date();
+
+
+        }
+    </script>
+</body>
+</html>

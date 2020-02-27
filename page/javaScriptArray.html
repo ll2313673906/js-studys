@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>javaScript数组</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      // 1. 创建数组
+      // 创建数组病赋值给myCars变量
+      // var myCars = new Array('Saab','volvo','BMW');
+      /**
+       * javaScript数组是动态的，可以声明一个数组，不给Array（）构造函数传值给任何参数，然后可以动弹添加元素
+       */
+      //   var myCars = new Array()
+      // myCars[0] = 'Saab'
+      // myCars[1] = 'volvo'
+      // myCars[2] = 'BMW'
+      // myCars[3] = 'Lincoln'
+
+
+      // 2.数组的方法
+      // 2.1 添加元素最简D单的方法
+      // var a = [];
+      // a[0] = 'zero';
+      // a[1] = 'one';
+      // console.log(a);
+
+      // 2.2 使用push（）方法在数组末尾增加一个或者多个元素
+      // var b = [];
+      // // 在末尾添加一个元素
+      // b.push('zero');
+      // // 在添加两个元素
+      // b.push('one','two');
+      // console.log(b);
+
+      // 2.3 pop()方法 用来抛出一个数组末尾的值，可以吧这个抛出来的值赋值给另一个变量存储起来
+      // 数组中任何类型的数组条目，（数值，字符串，甚至是数组）可以被抛出来
+      // var oneDown = [1,4,6].pop();
+      // console.log(oneDown);
+
+      // 2.4 shift()移除数组的第一个元素
+      // var  oneDown = [1,4,6].shift();
+      // console.log(oneDown);
+
+      // 2.5 unshift()方法，在数组的头部添加一个元素
+      // var a = ['zero'];
+      // a.unshift('one');
+      // console.log(a);
+
+      // 2.6 concat()方法 ，允许连接数组并创建一个全新的数组即将两个不同的数组连接为一个数组
+      // var c1 = ['HTML','CSS'];
+      // var c2 = ['JS','python'];
+      // var courses = c1.concat(c2);
+      // console.log(courses);
+
+      // 2.7 forEach()方法 用于调用数组的每个元素，并将元素传递给回调函数，，forEach对于空数组是不会执行回调函数的
+      // var numbers = [64,45,72,11,49];
+      // function myFunction(item,index) {
+      //     var demo = document.getElementById('demo');
+      //     // item 传递数组的值，index传递索引
+      //     demo.innerHTML = demo.innerHTML + 'index['+ index + ']:' + item + '<br>'
+      //
+      // }
+      // numbers.forEach(myFunction);
+
+      // 2.8 indexOf()方法  indexOf方法返回数组中某个指定的元素位值
+      // 该方法从头到尾的检索数组，看他是否含有对应的元素，返回第一次出现该元素
+      // 的位置。若果在数组中没有找到指定元素则返回-1
+
+      // var fruits = ['香蕉','橙子','苹果','甜品','苹果'];
+      // var a = fruits.indexOf('苹果');
+      // var b = fruits.indexOf('樱桃');
+      // console.log(a);
+      // console.log(b);
+
+      // 2.9 slice()方法 从已有的数组中选定的元素，提取字符串的某个部分，并以新的字符串返回被提取的部分，该方法不会改变原始数组
+      var fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
+      var citrus = fruits.slice(1, 3)
+      console.log(citrus)
+
+      // 6.3 关联数组
+      // var person = [];
+      // person['name'] = 'Loen';
+      // person['age'] = 37;
+      // console.log(person['age']);
+    </script>
+  </body>
+</html>

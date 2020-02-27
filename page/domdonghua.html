@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM动画</title>
+    <style>
+        #container{
+            width: 600px;
+            height: 400px;
+            background: pink;
+            position: relative;
+        }
+
+        #box{
+            width: 60px;
+            height: 60px;
+            background: yellowgreen;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="box"></div>
+</div>
+
+<script>
+    // 创建一个每500毫秒调用一个move()函数的计时器
+    var t = setInterval(move,500);
+    // 定义move()函数，改变框的位置
+    // 定义开始的位置
+    var pos = 0;
+    // 获取box元素
+    var box = document.getElementById("box");
+    function move() {
+        pos += 1;
+        box.style.left = pos + "px";
+
+    }
+
+    // 每10秒调用move函数的定时器
+    var t = setInterval(move,10);
+    // 在合资到达容器的末端时停止动画，使用clearInterval方法来停止定时器
+    function move() {
+        if (pos >= 540){
+            clearInterval(t);
+        } else {
+            pos += 1;
+            box.style.left = pos + "px";
+        }
+    }
+    // 当箱子的left属性到值600时，盒子到达容器的末端，容器宽度为600px，盒子宽为60px
+    var pos = 0;
+    // 盒子元素
+    var box = document.getElementById("box");
+    var t = setInterval(move,10);
+
+    function move() {
+        if (pos >= 540){
+            clearInterval(t);
+    }else {
+            pos += 1;
+            box.style.left = pos + "px";
+        }
+    }
+
+    // document对象具有三种方法常用于选择HTML元素
+    // 通过id找元素
+    document.getElementById(id);
+    // 通过类找元素
+    document.getElementsByClassName(name);
+    // 通过 标签 找元素
+    document.getElementsByTagName(name);
+
+
+
+</script>
+</body>
+</html>

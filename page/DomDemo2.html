@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>获取页面的所有段落元素并更改其内容</title>
+
+</head>
+<body>
+<p>hi</p>
+<p>hello</p>
+<p>hi</p>
+
+<img src="" alt="" id="my-img">
+<script>
+    var arr = document.getElementsByTagName("p");
+    for (var x = 0; x < arr.length; x++){
+        arr[x].innerHTML = "Hi there";
+    }
+
+    /**
+     * DOM中的每个元素都有一组属性和方法，
+     * element.childNodes ,返回一个元素的子节点的数组
+     * element.firstChild,返回元素的第一个子节点
+     * element.lastChild,返回元素的最后一个子节点
+     * element.hasChildNodes,若果元素有任何子节点，则返回true，否则为false
+     * element.nextSibling,返回相同树级别的上一个节点
+     * element.previousSibling,返回在同一树级别的上一个节点
+     * element.parentNode返回元素的父节点
+     */
+
+    // 2.改变属性
+    var el = document.getElementById("my-img");
+    el.src = "2.jpg";
+
+</script>
+<!--// 3.改变样式 使用元素的style的对象来-->
+<div id="demo3" style="width: 200px;">一些文本</div>
+<script>
+    var x = document.getElementById("demo3");
+    x.style.color = "6600FF";
+    x.style.width = "100px";
+</script>
+</body>
+</html>

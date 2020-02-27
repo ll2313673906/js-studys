@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>幻灯片案列</title>
+    <style>
+        img{
+            width:400px;
+            height: 400px;
+        }
+    </style>
+
+</head>
+<body>
+<div>
+    <button onclick="prev()">上一张</button>
+    <img id="slider" src="https://hbimg.huabanimg.com/8af0592366d8e54f508891fdeb58d301b9d52670de622-gnMZoS_fw658" alt="">
+    <button onclick="next()">下一张</button>
+</div>
+<script>
+    var images = [
+        "https://hbimg.huabanimg.com/ee5bf07b84fead3d57b445d2e7fa8eb6afe827c617e9c-ha1fZH_fw658",
+        "https://hbimg.huabanimg.com/3127d5a4cf3a0ab64b15689321d23f888247ef62a7292-eCMMDL_fw658",
+        "https://hbimg.huabanimg.com/5d2d68317ba87278078df53b909f492c3f81f10bdf05c-v3SOBf_fw658",
+        "https://hbimg.huabanimg.com/a1de84c8daa637dc031478f7cb82f738901d137a128b9e-IQMX27_fw658"
+    ];
+    var num = 0;
+    function next() {
+        var slider = document.getElementById("slider");
+        num++;
+        if (num >= images.length) {
+            num = 0;
+        }
+        slider.src = images[num];
+
+    }
+    function prev() {
+        var slider = document.getElementById("slider");
+        num--;
+        if (num < 0){
+            num = images.length - 1;
+        }
+        slider.src = images[num];
+
+    }
+</script>
+</body>
+</html>

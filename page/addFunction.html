@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加方法</title>
+</head>
+<body>
+<script>
+
+    // 5.添加方法
+    /**
+     * 方法是存储在对象属性中的函数
+     * this关键字是当前对象的引用，可以使用this来访问对象属性和方法
+     * 在构造函数中定义方法
+     */
+    // function person1(name,age) {
+    //     this.name = name;
+    //     this.age = age;
+    //     this.changeName = function (name) {
+    //         this.name = name;
+    //     }
+    // }
+    // var p = new person('Loen',34);
+    // p.changeName('John');
+    // 在构造函数外部定义一个函数，通过函数的各个关联到对象的属性上
+    function person(name,age) {
+        this.name = name;
+        this.age = age;
+        this.yearOfBirth = bprnYear
+
+    }
+    function bornYear() {
+        return new Date().getFullYear() - this.age;
+
+    }
+</script>
+</body>
+</html>

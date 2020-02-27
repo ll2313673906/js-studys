@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<script>
+    // 声明函数
+    function myFunction(a,b) {
+        return a * b;
+    }
+    var res = myFunction(3,5)
+    document.write(res)
+
+    /**
+     * 多个参数
+     * 调用多个参数的函数时候，应该和定义他们的相同的顺序提供参数
+     */
+    function sayHello(name,age,gender) {
+        document.write("姓名：" + name + "</br>" +" 年龄：" + age + "</br>" + "性别"+  gender + "</br>");
+    }
+    sayHello('HTML',23,'nna');
+
+
+    /**
+     * 全局变量
+     * 变量在函数外定义，即为全局变量
+     * 全局变量有全局作用域，网页中所有脚本和函数均可以使用
+     */
+    var carName = '大众';
+    function f() {
+        // 函数内可以调用carName的变量
+    }
+
+    /**
+     * 如果在变量函数内没有声明，该变量为全局变量
+     *
+     */
+    function myFunction() {
+        carName = "大众";
+
+    }
+
+    /**
+     * javaScript中的弹出框，一下三种类型
+     * Alert: 当弹出警报框时，用户必须单击确定，采用单个参数，
+     * Prompt,弹出一个输入框
+     * Confirm，让用户验证或接收某些内容
+     */
+    // alert("你好，这是一个警告框，你必须点击确定")
+    // Prompt提示框
+    // var user = prompt("请输入你的名字");
+    // Confirm确认框
+    var result = confirm("你确定你要离开这个页面？");
+    if (resule === true){
+        alert("感谢你的光临")
+    } else {
+        alert('感谢你继续使用我们的服务')
+    }
+
+</script>
+</body>
+</html>
