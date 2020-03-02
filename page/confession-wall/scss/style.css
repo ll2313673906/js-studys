@@ -1,0 +1,228 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300px;
+  font-size: 16px;
+  text-align: center;
+}
+
+#container {
+  width: 100vw;
+  height: 100vh;
+  background: green;
+  background: url(../image/bg.png) no-repeat;
+  -webkit-transform: scaleY(1.1);
+          transform: scaleY(1.1);
+}
+
+#wall {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: url("../image/1.jpg");
+}
+
+#wall #people-span {
+  margin-left: 80px;
+}
+
+#wall #people-info:hover .people-info-content {
+  display: block;
+}
+
+#wall .people-info-content {
+  padding-left: 10px;
+  padding-bottom: 10px;
+  margin-left: 30%;
+  background: -webkit-gradient(linear, left top, right top, from(#e9b3d9), color-stop(#ebc9ee), color-stop(#f0c3f0), color-stop(#ecaaec), to(#fdbbfa));
+  background: linear-gradient(to right, #e9b3d9, #ebc9ee, #f0c3f0, #ecaaec, #fdbbfa);
+  position: absolute;
+  color: black;
+  border-radius: 10px;
+  line-height: 20px;
+  text-align: left;
+  width: 400px;
+  height: 400px;
+  display: none;
+}
+
+#wall .people-info-content .info-top {
+  width: 100%;
+  height: 80px;
+  background: green;
+  margin-left: -6px;
+  text-align: center;
+}
+
+#wall .people-info-content .info-top img {
+  width: 80px;
+  height: 80px;
+  margin-top: 50px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#wall .people-info-content h3 {
+  margin-top: 6px;
+}
+
+#wall .picture img {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  width: 50px;
+  height: 300px;
+  width: 130px;
+  margin: 10px 24px;
+  height: 200px;
+  -webkit-box-shadow: 2px 1px 3px #f8a4df;
+          box-shadow: 2px 1px 3px #f8a4df;
+}
+
+#wall .picture img:hover {
+  -webkit-animation: moveImg 5s forwards;
+          animation: moveImg 5s forwards;
+}
+
+@-webkit-keyframes moveImg {
+  5% {
+    -webkit-animation: 5s;
+            animation: 5s;
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-filter: blur(6px);
+            filter: blur(6px);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    z-index: 333;
+    -webkit-transform: scale(2.4);
+            transform: scale(2.4);
+    -webkit-filter: none;
+            filter: none;
+  }
+}
+
+@keyframes moveImg {
+  5% {
+    -webkit-animation: 5s;
+            animation: 5s;
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-filter: blur(6px);
+            filter: blur(6px);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    z-index: 333;
+    -webkit-transform: scale(2.4);
+            transform: scale(2.4);
+    -webkit-filter: none;
+            filter: none;
+  }
+}
+
+.love {
+  width: 70px;
+  height: 80px;
+  display: none;
+  position: absolute;
+  margin: -100px 80%;
+}
+
+.love img {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  margin: 10px 30px;
+}
+
+.love img:nth-child(1) {
+  margin: 170px -30px;
+  -webkit-animation: love1 linear 1s infinite;
+          animation: love1 linear 1s infinite;
+}
+
+.love img:nth-child(2) {
+  margin: 170px -30px;
+  -webkit-animation: love1 linear 1s infinite;
+          animation: love1 linear 1s infinite;
+}
+
+@-webkit-keyframes love1 {
+  1% {
+    margin-top: 70px;
+  }
+  50% {
+    margin-left: -10px;
+  }
+  to {
+    margin: 10px 10px;
+    -webkit-transform: scale(2.4);
+            transform: scale(2.4);
+  }
+}
+
+@keyframes love1 {
+  1% {
+    margin-top: 70px;
+  }
+  50% {
+    margin-left: -10px;
+  }
+  to {
+    margin: 10px 10px;
+    -webkit-transform: scale(2.4);
+            transform: scale(2.4);
+  }
+}
+
+@-webkit-keyframes love2 {
+  1% {
+    margin-top: 70px;
+  }
+  to {
+    margin-top: 10px;
+    -webkit-transform: scale(2.4);
+            transform: scale(2.4);
+  }
+}
+
+@keyframes love2 {
+  1% {
+    margin-top: 70px;
+  }
+  to {
+    margin-top: 10px;
+    -webkit-transform: scale(2.4);
+            transform: scale(2.4);
+  }
+}
+
+#people-span {
+  position: relative;
+}
+
+#people-span:active .love {
+  display: block;
+  z-index: 555;
+}
+/*# sourceMappingURL=style.css.map */

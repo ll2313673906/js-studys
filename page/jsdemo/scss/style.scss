@@ -1,0 +1,101 @@
+$lineCount: 6;
+$count: 8;
+
+@function randomNum($max, $min: 0, $u: 1) {
+    @return ($min + random($max)) * $u;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#top {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    height: 55px;
+    background-color: rgb(164, 136, 167);
+}
+
+#container {
+    width: 90%;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.queue {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 24%;
+}
+
+.item {
+    position: relative;
+    width: 85%;
+    margin: 2%;
+}
+
+@for $i from 1 to $lineCount+1 {
+    .queue:nth-child(#{$i}) {
+        @for $j from 1 to $count+1 {
+            .item:nth-child(#{$j}) {
+                height: #{randomNum(180, 130)}px;
+                border-radius: 5px;
+                box-shadow: 4px 4px 6px 1px gray;
+                cursor: pointer;
+                padding: 10px;
+
+                img {
+                    position: absolute;
+                    top: 20px;
+                    left: 10px;
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 50%;
+                }
+
+                .title {
+                    position: absolute;
+                    top: 60px;
+                    left: 10px;
+                    color: #444;
+                    font-size: 14px;
+                }
+
+                .sub-title {
+                    position: absolute;
+                    top: 20px;
+                    left: 30%;
+                    color: #282c34;
+                    font-size: 14px;
+                    margin-bottom: 20px;
+                    line-height: 20px;
+                }
+
+                .link {
+                    position: absolute;
+                    top: 60%;
+                    left: 35%;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 5px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 10px;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+.mr {
+    margin-right: 30px;
+}

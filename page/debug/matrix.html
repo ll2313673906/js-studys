@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>矩阵debug测试</title>
+  </head>
+  <body>
+    <script language="javascript">
+      function matrixMax() {
+        // 创建一位数组
+        var matrix = new Array()
+        for (var i = 0; i < 4; i++) {
+          // 声明二维数组
+
+          matrix[i] = new Array()
+          for (var j = 0; j < 3; j++) {
+            matrix[i][j] = i + j
+          }
+        }
+
+        var matrixMax = 0
+
+        for (var i = 0; i < matrix.length; i++) {
+          for (j = 0; j < matrix[0].length; j++) {
+            if (matrix[i][j] > matrixMax) {
+              matrixMax = matrix[i][j]
+              debugger
+              console.log(i)
+            }
+          }
+        }
+        return matrixMax
+      }
+      console.log(matrixMax())
+    </script>
+  </body>
+</html>

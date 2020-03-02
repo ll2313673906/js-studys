@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon" />
+    <script src="../js/hello.js"></script>
+    <title>隔行变色</title>
+    <style>
+      #demo {
+        width: 800px;
+        margin: auto;
+      }
+      #demo .item {
+        height: 80px;
+        line-height: 80px;
+        margin-bottom: 10px;
+        border: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>
+      点击按钮，看下效果
+    </h2>
+    <button onclick="change()">点我</button>
+    <!-- div#demo>p.ite10*6>Lorem10 -->
+    <div id="demo">
+      <p class="item">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil, reprehenderit?
+      </p>
+      <p class="item">
+        Natus illum quos odit quasi modi error, dicta esse quam?
+      </p>
+      <p class="item">
+        Magnam commodi sed quisquam repellendus nisi cum perferendis molestiae molestias?
+      </p>
+      <p class="item">
+        Expedita commodi ducimus laborum aliquam saepe libero est eveniet temporibus.
+      </p>
+      <p class="item">
+        Tempora, soluta maiores error quas id atque molestias veritatis odio!
+      </p>
+      <p class="item">
+        Voluptas, itaque sapiente dignissimos sed laborum commodi molestias sint ducimus?
+      </p>
+      <p class="item">
+        Assumenda quibusdam aliquid necessitatibus esse reiciendis laudantium, obcaecati repudiandae soluta.
+      </p>
+      <p class="item">
+        Voluptates esse officiis sequi ratione, minus exercitationem similique consectetur natus.
+      </p>
+      <p class="item">
+        Suscipit consequatur ducimus soluta, iure vero voluptas optio deleniti saepe.
+      </p>
+      <p class="item">
+        Id sed, consectetur est dicta blanditiis possimus illum doloribus earum!
+      </p>
+    </div>
+
+    <script>
+      function change() {
+        console.log('click')
+        var items = document.getElementsByClassName('item')
+        for (let index = 0; index < items.length; index++) {
+          const element = items[index]
+          if (index % 2 == 0) {
+            element.style.backgroundColor = 'rgba(1,1,1,0.2)'
+            element.style.height = 150 + 'px'
+          } else {
+            element.style.backgroundColor = '#080'
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
